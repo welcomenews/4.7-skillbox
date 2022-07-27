@@ -1,7 +1,7 @@
 # 4.7-skillbox
 
-
-#### Создание самоподписанного сертификата
+```
+## Создание самоподписанного сертификата
 
 sudo apt install openssl
 mkdir cert
@@ -21,7 +21,7 @@ Organization Name (eg, company) [Internet Widgits Pty Ltd]:My Compony
 Organizational Unit Name (eg, section) []:
 Common Name (e.g. server FQDN or YOUR name) []:my-compony.ru
 Email Address []:
-
+```
 #### Для запуска утилиты htpasswd
 sudo apt install apache2-utils -y
 
