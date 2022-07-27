@@ -103,6 +103,8 @@ $ docker push 127.0.0.1/tornado
 $ curl https://sergey:123456@192.168.1.96/v2/_catalog -k
 
 
+
+
 https://docs.docker.com/registry/deploying/
 
 https://trueconf.ru/blog/baza-znaniy/kak-sgenerirovat-samopodpisannyj-sertifikat.html#_OpenSSL_Linux
