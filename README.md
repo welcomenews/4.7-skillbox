@@ -65,6 +65,16 @@ $ docker login 127.0.0.1
 или
 $ docker login 192.168.1.96
 
+## Проверяем что ключ добавился
+$ cat ~/.docker/config.json
+{
+	"auths": {
+		"127.0.0.1": {
+			"auth": "c2VyZ2V5OjE..."
+		}
+	}
+}
+
 ```
 #### Для запуска утилиты htpasswd
 sudo apt install apache2-utils -y
