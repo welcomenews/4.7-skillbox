@@ -21,8 +21,8 @@ services:
       - 5000:5000
     environment:
       REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
-      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/certificate.crt
-      REGISTRY_HTTP_TLS_KEY: /certs/privateKey.key
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/mycert.crt
+      REGISTRY_HTTP_TLS_KEY: /certs/mykey.key
       REGISTRY_AUTH: htpasswd
       REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
       REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
