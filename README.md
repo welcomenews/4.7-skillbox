@@ -102,8 +102,7 @@ $ docker push 127.0.0.1/tornado
 #### Проверяем список образов в нашем репозитории
 $ curl https://sergey:123456@192.168.1.96/v2/_catalog -k
 
-
-
+###########################
 
 https://docs.docker.com/registry/deploying/
 
