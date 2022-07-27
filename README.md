@@ -38,9 +38,9 @@ $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker.service
 
 ## Создание самоподписанного сертификата
-mkdir cert
-cd cert
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.crt
+$ mkdir cert
+$ cd cert
+$ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.crt
 где:
 -x509 — уточнение, что нам нужен именно самоподписанный сертификат;
 -newkey — автоматическое создание ключа сертификата;
@@ -63,16 +63,16 @@ $ mkdir -p /etc/docker/certs.d/192.168.1.96/
 
 $ docker login 127.0.0.1
 или
-docker login 192.168.1.96
+$ docker login 192.168.1.96
 
 ```
 #### Для запуска утилиты htpasswd
 sudo apt install apache2-utils -y
 
 #### Создаём пользователя и пароль
-mkdir auth
-cd auth
-htpasswd -B -c ./auth/htpasswd sergey  <-- имя
+$ mkdir auth
+$ cd auth
+$ htpasswd -B -c ./auth/htpasswd sergey  <-- имя
 
 #### Собираем образ
 $ docker build -t tornado .
