@@ -39,6 +39,9 @@ $ openssl dhparam -out dhparam.pem 2048
 $ mkdir -p /etc/docker/certs.d/192.168.1.96/
 туда кидаем наш серт mycert.crt только переиновать там его нужно в ca.crt
 
+$ docker login 127.0.0.1
+или
+docker login 192.168.1.96
 
 ```
 #### Для запуска утилиты htpasswd
@@ -47,5 +50,21 @@ sudo apt install apache2-utils -y
 #### Создаём пользователя и пароль
 htpasswd -B -c ./auth/htpasswd sergey  <-- имя
 
+#### Собираем образ
+$ docker build -t tornado .
 
+#### Запуск docker-compose
+$ docker-compose up -d
+
+#### Запуск нашего собранного образа tornado
+$ docker run -d -p 127.0.0.1:8888:8888 tornado
+
+#### Даём таг для загрузки в наш репозиторий
+$ docker tag tornado:latest 127.0.0.1/tornado
+
+#### Загружаем в наш репозиторий
+$ docker push 127.0.0.1/tornado
+
+#### Проверяем наш репозиторий
+$ curl https://sergey:123456@192.168.1.96/v2/_catalog -k
 
