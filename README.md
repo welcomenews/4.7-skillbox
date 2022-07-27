@@ -70,6 +70,8 @@ docker login 192.168.1.96
 sudo apt install apache2-utils -y
 
 #### Создаём пользователя и пароль
+mkdir auth
+cd auth
 htpasswd -B -c ./auth/htpasswd sergey  <-- имя
 
 #### Собираем образ
