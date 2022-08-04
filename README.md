@@ -58,6 +58,9 @@ Email Address []:
 
 $ openssl dhparam -out dhparam.pem 2048
 
+## ----- Прочитать сертификат можно ------
+$ openssl -x509 -in certs/mycert.crt -text
+
 $ mkdir -p /etc/docker/certs.d/192.168.1.96/
 туда кидаем наш серт mycert.crt только переиновать там его нужно в ca.crt
 
